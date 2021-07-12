@@ -2,7 +2,7 @@ package com.datastructures.example;
 
 public class ArrayStack {
     private int top;
-    private int size = 5;
+    private int size = 100;
     private int[] array = new int[size];
 
     public ArrayStack(){
