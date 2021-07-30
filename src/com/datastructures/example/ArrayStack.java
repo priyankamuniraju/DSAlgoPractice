@@ -3,10 +3,16 @@ package com.datastructures.example;
 public class ArrayStack {
     private int top;
     private int size = 100;
-    private int[] array = new int[size];
+    private int[] stack;
 
     public ArrayStack(){
+        top = -1;
+    }
+
+    public ArrayStack(int size){
         top =-1;
+        int capacity = size;
+        stack = new int[capacity];
     }
     boolean isEmpty(){
         return top < 0;
@@ -16,7 +22,7 @@ public class ArrayStack {
             System.out.println("Stack Overflow");
         }
         else{
-            array[++top] = x;
+            stack[++top] = x;
 //            System.out.println("Top value after push  "+top);
         }
     }
@@ -27,7 +33,7 @@ public class ArrayStack {
             return 0;
         }
         else{
-            int x = array[top];
+            int x = stack[top];
             top = top-1;
 //            System.out.println("Top value after pop is "+top);
             return x;
@@ -40,7 +46,7 @@ public class ArrayStack {
             return 0;
         }
         else {
-            int x = array[top];
+            int x = stack[top];
 //            System.out.println("Top value at peek is "+top);
             return x;
         }
@@ -53,7 +59,7 @@ public class ArrayStack {
             System.out.print("Elements in the stack from top to down : ");
             for(int i = size-1 ; i >= 0;i--)
             {
-                System.out.print(" " + array[i]);
+                System.out.print(" " + stack[i]);
             }
             System.out.println();
         }

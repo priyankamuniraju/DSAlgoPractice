@@ -18,13 +18,11 @@ public class ArrayQueue {
     void enqueue(int x){
         if( rear==capacity){
             System.out.println("Queue Full");
-            return;
         }
         else{
             queue[rear] = x;
             rear++;
         }
-        return;
     }
 
     int dequeue(){
@@ -62,8 +60,7 @@ public class ArrayQueue {
             return -1;
         }
         else{
-            int x = queue[front];
-            return x;
+            return (queue[front]);
         }
     }
 
