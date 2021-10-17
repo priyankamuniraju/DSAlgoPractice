@@ -15,6 +15,7 @@ public class ArrayQueue {
         return (front==rear);
     }
 
+    //add from the back/rear
     void enqueue(int x){
         if( rear==capacity){
             System.out.println("Queue Full");
@@ -25,6 +26,7 @@ public class ArrayQueue {
         }
     }
 
+    //delete from the front
     int dequeue(){
         if(isEmpty()){
             System.out.println("Queue empty");

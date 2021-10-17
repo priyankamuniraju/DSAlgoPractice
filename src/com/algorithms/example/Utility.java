@@ -12,4 +12,19 @@ public class Utility {
         }
         return arr;
     }
+    public enum Vehicles{CAR, BIKE, BUS}
+
+    public static void main(String[] args){
+        String[] array = new String[10];
+        String[] array2 = {"a","b","c"};
+        for(Vehicles v : Vehicles.values()){
+            System.out.println(v);
+        }
+        for(String s:array){
+            System.out.println(s);
+        }
+    }
+
 }
+
+

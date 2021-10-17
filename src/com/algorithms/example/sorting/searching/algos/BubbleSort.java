@@ -20,7 +20,7 @@ public class BubbleSort {
                     flag=1;
                 }
             }
-            //if no swapping is done in a pass break from the outer for loop because this means the array is sorted.
+            //if no swapping is done in a pass break from the outer for loop because this means the array is now sorted.
             if(flag==0){
                 break;
             }

@@ -12,6 +12,7 @@ public class ListQueue {
         front = rear = null;
     }
 
+    //insert at the rear
     void enqueue(int x){
         QueueNode temp = new QueueNode();
         temp.data=x;
@@ -23,18 +24,19 @@ public class ListQueue {
             rear = temp;
         }
     }
+
+    //delete from the front
     void dequeue(){
         if(front==null){
             return;
         }
         else{
-            QueueNode temp = front;
+//            QueueNode temp = front;
             front = front.next;
         }
         if(front==null){
             rear=null;
         }
-
     }
 
     public static void main(String[] args){

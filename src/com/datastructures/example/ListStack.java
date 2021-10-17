@@ -14,12 +14,15 @@ public class ListStack {
         return(top == null);
     }
 
+    //push front
     void push(Integer x){
         Node temp = new Node();
         temp.data = x;
         temp.next = top;
         top = temp;
     }
+
+    //pop front
     int pop(){
         if(isEmpty()){
             System.out.println("Stack Empty, no elements to delete");

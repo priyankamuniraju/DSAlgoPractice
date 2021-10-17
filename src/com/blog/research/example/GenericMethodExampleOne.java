@@ -42,11 +42,14 @@ class OddPredicate implements Predicate<Integer> {
     private OddPredicate() {
         //deliberate
     }
-    //by creating the instance inside an inner class we make sure that the instance is not created until there is a reference to the class(in this case until somebody calls getInstance method)
+    //by creating the instance inside an inner class we make sure that the instance
+    // is not created until there is a reference to the class(in this case until somebody calls getInstance method)
     private static class OddPredicate_Holder {
         private static final OddPredicate My_Predicate = new OddPredicate();
     }
-    //below method of instantiating will cause resource creation even before class is loaded as it is a static member(this causes problems if there are resources like DB connections which have state)
+    //below method of instantiating will cause resource creation even before
+    // class is loaded as it is a static member(this causes problems if
+    // there are resources like DB connections which have state)
     //private static OddPredicate myPredicate = new OddPredicate();
 
     public static OddPredicate getInstance() {
